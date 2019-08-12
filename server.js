@@ -3,7 +3,8 @@
 var express = require("express");
 var path = require("path");
 const friends = require("./app/data/friends.js");
-var htmlRoutes = require("./app/routing/htmlRoutes")
+const htmlRoutes = require("./app/routing/htmlRoutes");
+const apiRoutes = require("./app/routing/apiRoutes");
 
 // Sets up the Express App
 // =============================================================
@@ -21,14 +22,15 @@ app.use(express.static(path.join(__dirname,'public')));
 // Routes
 // =============================================================
 app.use('/',htmlRoutes);
+app.use('/api/friends', apiRoutes);
 
 app.get("/api/friends", function(req, res) {
-    res.sendFile(path.join(__dirname, "/app","/public","/home.html"));
+    return res.json(friends);
 });
+
 
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-    console.log(friends);
 });
