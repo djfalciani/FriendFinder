@@ -2,6 +2,8 @@
 // =============================================================
 var express = require("express");
 var path = require("path");
+const friends = require("./app/data/friends.js");
+var htmlRoutes = require("./app/routing/htmlRoutes")
 
 // Sets up the Express App
 // =============================================================
@@ -18,24 +20,15 @@ app.use(express.static(path.join(__dirname,'public')));
 // =============================================================
 // Routes
 // =============================================================
-// Basic route that sends the user first to the AJAX Page
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "/app","/public","/home.html"));
-});
+app.use('/',htmlRoutes);
 
-app.get("/:page", function(req, res) {
-    // stash the url in a variable...
-    let thePage = req.params.page.toLowerCase()
-    switch (thePage) {
-        case 'survey' :
-            return res.sendFile(path.join(__dirname, "/app","/public","/survey.html"));
-        default :
-            return res.sendFile(path.join(__dirname, "/app","/public","/home.html"));
-    }
+app.get("/api/friends", function(req, res) {
+    res.sendFile(path.join(__dirname, "/app","/public","/home.html"));
 });
 
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
+    console.log(friends);
 });
