@@ -27,7 +27,7 @@
             </div>
         </form>
 
-        <h3><strong>Question 1</strong></h3>
+        <!-- <h3><strong>Question 1</strong></h3>
         <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
         <select class="chosen-select" id="q1">
             <option value=""></option>
@@ -38,6 +38,31 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
+        <h3><strong>Question 2</strong></h3>
+        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+        <select name="plan" id="plan">
+            <option selected disabled hidden>Select an Option</option> 
+            <option value="free">Free</option> 
+            <option value="starter">Starter </option> 
+            <option value="professional">Professional</option> 
+            <option value="corporate">Corporate</option> 
+        </select>
+
+        <div>
+            <h3><strong>Question 3</strong></h3>
+            <h4>Do you like sunsets?</h4>
+            <select name="" id="" class="custom-select custom-select-lg">
+                <option selected hidden>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div> -->
+
+        <div class="survey"></div>
+
 
     </div>
 
@@ -46,5 +71,58 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- custom JS -->
+    <script src="assets/javascript/survey.js"></script>
+    <script>
+        // const questions = [
+        //     {q: "Chocolate Chip Cookies are the best desert"},
+        //     {q: "Vanilla ice cream is the best flavor"},
+        //     {q:"Chocolate ice cream is the best flavor"},
+        //     {q:"Strawberry ice cream is the best"},
+        //     {q:"Cookies and Cream ice cream is the best flavor"},
+        //     {q:"Every now and then, a day at the beach is better than a day at work"},
+        //     {q:"Marvel makes better movies than DC"},
+        //     {q:"Going for a walk after a stressful day helps calm you down"},
+        //     {q:"You enjoy spending time with friends"},
+        //     {q:"Music helps you focus"},
+        // ];
+        
+        // const selects = ["1 (Strongly Disagree)","2","3","4","5 (Strongly Agree)"];
+
+        // const start = () => {
+        //     let counter = 0;
+        //     let optionCounter = 1;
+
+        //     questions.forEach(element => {
+        //         const surveyDiv = $(".survey");
+        //         // Create a new Div
+        //         const questionDiv = $("<div class='question'>");
+        //         const question = element.q;
+        //         counter++;
+                
+        //         const questionHtml =    $(`<h3><strong>Question ${counter}</strong></h3>
+        //                                 <h4>${question}?</h4>`);
+                
+        //         const select = $('<select name="" id="" class="custom-select custom-select-lg"></select>');
+        //         const option = $("<option selected hidden>Open this select menu</option>");
+                
+        //         questionDiv.append(questionHtml);
+        //         surveyDiv.append(questionDiv);
+                
+        //         questionDiv.append(select);
+        //         select.append(option);
+
+        //         selects.forEach(element => {
+        //             const optionMenu = $(`<option value='${counter}'>${element}</option>`);
+        //             select.append(optionMenu);
+        //         });
+                
+        //     });
+        // }
+
+        // start();
+
+    </script>
 </body>
 </html>
