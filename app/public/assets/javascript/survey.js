@@ -1,3 +1,4 @@
+// Global Variables
 const questions = [
     {q: "Chocolate Chip Cookies are the best desert"},
     {q: "Vanilla ice cream is the best flavor"},
@@ -13,7 +14,7 @@ const questions = [
 
 const selects = ["1 (Strongly Disagree)","2","3","4","5 (Strongly Agree)"];
 
-const start = () => {
+const renderSurveyQuestions = () => {
     let counter = 0;
     let optionCounter = 1;
 
@@ -37,11 +38,12 @@ const start = () => {
         select.append(option);
 
         selects.forEach(element => {
-            const optionMenu = $(`<option value='${counter}'>${element}</option>`);
+            const optionMenu = $(`<option value='${optionCounter}'>${element}</option>`);
             select.append(optionMenu);
+            optionCounter++;
         });
         
     });
 }
 
-start();
+renderSurveyQuestions();
