@@ -11,12 +11,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <div class="jumbotron">
             <h1 class="display-4">Survey Questions</h1>
             <hr class="my-4">
         </div>
-
+    
         <form>
             <div class="form-group">
                 <h2>About You</h2>
@@ -28,21 +28,26 @@
                 <input type="file" class="form-control-file" id="survey-photo">
             </div>
         </form>
-
+    
         <div class="survey"></div>
         <br>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="postFriend">Submit</button>
+        <!-- type="submit" -->
 
-
-    </div>
-
-    <!-- sticky Footer -->
-    <footer class="footer mt-auto py-3 fixed-bottom">
-        <div class="container">
-            <!-- <span class="text-muted">Copyright &copy; 2019</span> -->
-            <span>Copyright &copy; 2019</span>
-        </div>
+        <!-- Alert -->
+        <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Missing answers!</strong> Please answer all questions in the survey.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div> -->
+        
+    </main>
+    
+    <footer class="footer">
+        <p><a href="/api/friends">API Friends List</a></p>
     </footer>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
